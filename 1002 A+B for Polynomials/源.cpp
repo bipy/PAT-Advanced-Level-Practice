@@ -1,4 +1,5 @@
 #include<iostream>
+using namespace std;
 typedef struct Lnode* List;
 struct Lnode {
 	double c;
@@ -6,5 +7,5 @@ struct Lnode {
 	List next;
 };
 int main() {
-	
+	cout << 123 << endl;
 }

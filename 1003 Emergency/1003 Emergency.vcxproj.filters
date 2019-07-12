@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Note.txt">
+    <Text Include="Text.txt">
       <Filter>资源文件</Filter>
     </Text>
   </ItemGroup>

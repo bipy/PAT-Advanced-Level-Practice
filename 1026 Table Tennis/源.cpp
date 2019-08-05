@@ -17,7 +17,6 @@ struct table {
 };
 vector<node> users;
 vector<table> tables;
-vector<node> waitinline;
 bool cmp(node a, node b) {
 	return a.arr < b.arr;
 }
@@ -35,12 +34,12 @@ int findvip(int x) {
 	}
 	return -1;
 }
-void serve(int tableindex, int userindex) {
+void serve(int tableindex, int arr, int cost) {
 	tables[tableindex].served++;
-	if (tables[tableindex].curtime < users[userindex].arr) {
-		tables[tableindex].curtime == users[userindex].arr;
+	if (tables[tableindex].curtime < arr) {
+		tables[tableindex].curtime == arr;
 	}
-	tables[tableindex].curtime += users[userindex].cost;
+	tables[tableindex].curtime += cost;
 }
 int main() {
 	int n, k, m;
@@ -63,34 +62,35 @@ int main() {
 		tables[i].id = i;
 	}
 	sort(users.begin(), users.end(), cmp);
-	for (int i = 0; i < users.size(); i++) {
-		int j = i;
-		sort(tables.begin(), tables.end(), tablecmp);
-		while(users[j].arr<tables[0].curtime) {
-			waitinline.push_back(users[j++]);
+	for (auto it = users.begin(); it != users.end(); it++) {
+		if (it->vip == 1) {
+			sort(tables.begin(), tables.end(), tablecmp);
+			serve(0, it->arr, it->cost);
+			it->wait = tables[0].curtime - it->cost - it->arr;
 		}
-		if (i <= k) {
-			if (tables[i].vip == 1) {
-				if (users[i].vip == 1) {
-					serve(i, i);
-				}
-				else {
-					int nextvip = findvip(i);
-					if (nextvip != -1) {
-						if (users[i].arr < users[nextvip].arr) {
-							serve(i, i);
-						}
-						else {
-							serve(i, nextvip);
+		else {
+			bool flag = false;
+			while (!flag) {
+				sort(tables.begin(), tables.end(), tablecmp);
+				if (tables[0].vip == 1) {
+					for (auto k = it; k != users.end(); k++) {
+						if (k->vip == 1) {
+							if (k->arr < tables[0].curtime) {
+								serve(0, k->arr, k->cost);
+								users.erase(k);
+
+								continue;
+							}
+							break;
 						}
 					}
 				}
-
-			}
-			else {
-
+				serve(0, it->arr, it->cost);
+				it->wait = tables[0].curtime - it->cost - it->arr;
+				flag = true;
 			}
 		}
-		return 0;
 	}
+	return 0;
+
 }

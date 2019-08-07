@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{21D44B79-1877-4856-81BA-66994091070F}</ProjectGuid>
-    <RootNamespace>My1026TableTennis</RootNamespace>
+    <ProjectGuid>{D0766531-B98D-4AE7-B603-707ABFD17E30}</ProjectGuid>
+    <RootNamespace>My1032Sharing</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,9 +127,6 @@
       <SubType>
       </SubType>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Text.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

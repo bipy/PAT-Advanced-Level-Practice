@@ -7,9 +7,7 @@ int getInteger(char c) {
 	if (c - 'a' >= 0) {
 		return c - 'a' + 10;
 	}
-	else {
-		return c - '0';
-	}
+	return c - '0';
 }
 int main() {
 	//freopen("Text.txt", "r", stdin);

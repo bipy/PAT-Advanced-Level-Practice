@@ -1,32 +1,37 @@
 #include<iostream>
 #include<string>
 using namespace std;
-int main() {
-	string s1, s2;
-	int n, dot, b1, b2;
-	bool eq = true;
-	cin >> n >> s1 >> s2;
-	for (b1 = 0; s1[b1] == '0'; b1++);
-	s1 = s1.substr(b1);
-	for (b2 = 0; s1[b2] == '0'; b2++);
-	s2 = s2.substr(b2);
-	for (dot = 0; dot < s1.length() && s1[dot] != '.'; dot++);
-	if (dot == s2.length() || (dot < s2.length() && s2[dot] == '.')) {
-		for (int i = 0; i < n; i++) {
-			if (s1[i] != s2[i]) {
-				eq = false;
-				break;
-			}
-		}
-		if (eq) {
-			printf("YES");
-			cout << " 0." << s1.substr(0, n) << "*10^" << dot;
-			return 0;
+int process(string& s, int n) {
+	int b, dot;
+	for (b = 0; s[b] == '0'; b++);
+	s = s.substr(b);
+	for (dot = 0; dot < s.length() && s[dot] != '.'; dot++);
+	s.erase(dot, 1);
+	if (dot == 0) {
+		for (b = 0; s[b] == '0'; b++);
+		s = s.substr(b);
+		if (!s.empty()) {
+			dot -= b;
 		}
 	}
+	while (s.length() < n) {
+		s.append("0");
+	}
+	s = s.substr(0, n);
+	return dot;
+}
+int main() {
+	int n;
+	string s1, s2;
+	cin >> n >> s1 >> s2;
+	int dot1 = process(s1, n), dot2 = process(s2, n);
+	if (dot1 == dot2 && s1 == s2) {
+		printf("YES");
+		cout << " 0." << s1 << "*10^" << dot1;
+		return 0;
+	}
 	printf("NO");
-	cout << " 0." << s1.substr(0, n) << "*10^" << dot;
-	for (dot = 0; dot < s2.length() && s2[dot] != '.'; dot++);
-	cout << " 0." << s2.substr(0, n) << "*10^" << dot;
+	cout << " 0." << s1 << "*10^" << dot1;
+	cout << " 0." << s2 << "*10^" << dot2;
 	return 0;
 }

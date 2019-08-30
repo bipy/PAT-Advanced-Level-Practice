@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{03A2B7BE-0B51-424E-9033-2E4D6459468C}</ProjectGuid>
-    <RootNamespace>My1060AreTheyEqual</RootNamespace>
+    <ProjectGuid>{3D1D9B29-1DB8-4042-A233-53337DC44744}</ProjectGuid>
+    <RootNamespace>My1065ABandC64bit</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,9 +127,6 @@
       <SubType>
       </SubType>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Text.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

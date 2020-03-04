@@ -13,9 +13,10 @@ void find(int index, int sum, vector<int> pocket) {
 		return;
 	}
 	for (int i = index + 1; found == false && i < coins.size() && sum + coins[i] <= m; i++) {
-		vector<int> temp = pocket;
-		temp.push_back(coins[i]);
-		find(i, sum + coins[i], temp);
+		//vector<int> temp = pocket;
+		pocket.push_back(coins[i]);
+		find(i, sum + coins[i], pocket);
+		pocket.pop_back();
 	}
 }
 int main() {

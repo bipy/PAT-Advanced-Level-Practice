@@ -6,7 +6,7 @@ using namespace std;
 vector<int> coins, t, ans;
 int n, m;
 bool found = false;
-void find(int index, int sum, vector<int> pocket) {
+void find(int index, int sum, vector<int> &pocket) {
 	if (sum == m) {
 		ans = pocket;
 		found = true;

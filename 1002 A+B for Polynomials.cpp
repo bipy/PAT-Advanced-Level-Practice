@@ -1,6 +1,14 @@
 #include<iostream>
 #include<cstdlib>
 using namespace std;
+/*
+系数相加可能为0，此时不能输出或者计数
+输出格式为“保留1位小数”
+
+较简单的方法：
+建一个大于最大指数的数组array
+array[指数]=系数; 通用性较低
+*/
 typedef struct Lnode* List, * PtrL;
 struct Lnode {
 	double c;

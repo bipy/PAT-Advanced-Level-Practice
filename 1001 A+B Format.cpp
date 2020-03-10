@@ -1,6 +1,7 @@
 #include<iostream>
 #include <string>
 using namespace std;
+//以1000为步长找到开头并输出后，后面要一位一位地输出，否则“000”只能输出一个“0”
 int main() {
 	int a, b, sum;
 	cin >> a >> b;

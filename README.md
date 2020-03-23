@@ -1,10 +1,10 @@
-## PAT 甲级 OJ 的解决方案
+# PAT 甲级 OJ 的解决方案
 
 本项目为 Microsoft Visual Studio 生成的包含 PAT 甲级所有题目解决方案
 
 项目 Clone 下来可以直接导入 Visual Studio，可以非常方便地查看运行复习
 
-## Feature
+# Feature
 
 本项目所有代码由 C++ 完成，并全部在 Visual Studio 2019 上调试通过
 
@@ -17,11 +17,10 @@
 
 还有一些题目给出了多种解题思路
 
-### More
+# More
 
 解题思路与代码风格在前面一些题变化较多，之后便逐渐趋于稳定
 
-**另有提取出的C++源代码在另一分支 [Source Code ](https://github.com/bipy/PAT-Advanced-Level-Practice/tree/source)**
+**另有提取出的 C++ 源代码在另一分支 [Source Code ](https://github.com/bipy/PAT-Advanced-Level-Practice/tree/source)**
 
-参加了2019.9.8的PAT考试，详情见我的Blog [一次“不太顺利”的PAT考试经历](https://blog.zhengrh.com/post/pat-20190908/)
-
+参加了 2019.9.8 的 PAT 考试，详情见我的Blog： [一次”不太顺利”的 PAT 考试经历](https://blog.zhengrh.com/post/pat-20190908/)

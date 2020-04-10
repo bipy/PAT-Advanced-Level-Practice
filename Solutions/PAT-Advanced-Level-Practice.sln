@@ -233,6 +233,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1087 All Roads Lead to Rome
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1088 Rational Arithmetic", "1088 Rational Arithmetic\1088 Rational Arithmetic.vcxproj", "{3203E50D-67B8-44A7-8831-111F08AB86B3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1089 Insert or Merge", "1089 Insert or Merge\1089 Insert or Merge.vcxproj", "{09DF0DFB-2659-4AE0-8F39-247052796E2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -1161,6 +1163,14 @@ Global
 		{3203E50D-67B8-44A7-8831-111F08AB86B3}.Release|x64.Build.0 = Release|x64
 		{3203E50D-67B8-44A7-8831-111F08AB86B3}.Release|x86.ActiveCfg = Release|Win32
 		{3203E50D-67B8-44A7-8831-111F08AB86B3}.Release|x86.Build.0 = Release|Win32
+		{09DF0DFB-2659-4AE0-8F39-247052796E2F}.Debug|x64.ActiveCfg = Debug|x64
+		{09DF0DFB-2659-4AE0-8F39-247052796E2F}.Debug|x64.Build.0 = Debug|x64
+		{09DF0DFB-2659-4AE0-8F39-247052796E2F}.Debug|x86.ActiveCfg = Debug|Win32
+		{09DF0DFB-2659-4AE0-8F39-247052796E2F}.Debug|x86.Build.0 = Debug|Win32
+		{09DF0DFB-2659-4AE0-8F39-247052796E2F}.Release|x64.ActiveCfg = Release|x64
+		{09DF0DFB-2659-4AE0-8F39-247052796E2F}.Release|x64.Build.0 = Release|x64
+		{09DF0DFB-2659-4AE0-8F39-247052796E2F}.Release|x86.ActiveCfg = Release|Win32
+		{09DF0DFB-2659-4AE0-8F39-247052796E2F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

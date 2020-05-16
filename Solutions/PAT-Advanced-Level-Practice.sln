@@ -261,6 +261,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1101 Quick Sort", "1101 Qui
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1102 Invert a Binary Tree", "1102 Invert a Binary Tree\1102 Invert a Binary Tree.vcxproj", "{319217E1-6031-47D1-98AB-037BD02E8365}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1103 Integer Factorization", "1103 Integer Factorization\1103 Integer Factorization.vcxproj", "{253F0B85-9E08-425C-8867-84F0D22A711D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -1301,6 +1303,14 @@ Global
 		{319217E1-6031-47D1-98AB-037BD02E8365}.Release|x64.Build.0 = Release|x64
 		{319217E1-6031-47D1-98AB-037BD02E8365}.Release|x86.ActiveCfg = Release|Win32
 		{319217E1-6031-47D1-98AB-037BD02E8365}.Release|x86.Build.0 = Release|Win32
+		{253F0B85-9E08-425C-8867-84F0D22A711D}.Debug|x64.ActiveCfg = Debug|x64
+		{253F0B85-9E08-425C-8867-84F0D22A711D}.Debug|x64.Build.0 = Debug|x64
+		{253F0B85-9E08-425C-8867-84F0D22A711D}.Debug|x86.ActiveCfg = Debug|Win32
+		{253F0B85-9E08-425C-8867-84F0D22A711D}.Debug|x86.Build.0 = Debug|Win32
+		{253F0B85-9E08-425C-8867-84F0D22A711D}.Release|x64.ActiveCfg = Release|x64
+		{253F0B85-9E08-425C-8867-84F0D22A711D}.Release|x64.Build.0 = Release|x64
+		{253F0B85-9E08-425C-8867-84F0D22A711D}.Release|x86.ActiveCfg = Release|Win32
+		{253F0B85-9E08-425C-8867-84F0D22A711D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

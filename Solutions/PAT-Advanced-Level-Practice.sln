@@ -263,6 +263,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1102 Invert a Binary Tree",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1103 Integer Factorization", "1103 Integer Factorization\1103 Integer Factorization.vcxproj", "{253F0B85-9E08-425C-8867-84F0D22A711D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1104 Sum of Number Segments", "1104 Sum of Number Segments\1104 Sum of Number Segments.vcxproj", "{2E28620B-6C6D-4798-A2E4-707B954CF210}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1105 Spiral Matrix", "1105 Spiral Matrix\1105 Spiral Matrix.vcxproj", "{7DCFE063-AB94-4A3C-85B3-344596D78621}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -1311,6 +1315,22 @@ Global
 		{253F0B85-9E08-425C-8867-84F0D22A711D}.Release|x64.Build.0 = Release|x64
 		{253F0B85-9E08-425C-8867-84F0D22A711D}.Release|x86.ActiveCfg = Release|Win32
 		{253F0B85-9E08-425C-8867-84F0D22A711D}.Release|x86.Build.0 = Release|Win32
+		{2E28620B-6C6D-4798-A2E4-707B954CF210}.Debug|x64.ActiveCfg = Debug|x64
+		{2E28620B-6C6D-4798-A2E4-707B954CF210}.Debug|x64.Build.0 = Debug|x64
+		{2E28620B-6C6D-4798-A2E4-707B954CF210}.Debug|x86.ActiveCfg = Debug|Win32
+		{2E28620B-6C6D-4798-A2E4-707B954CF210}.Debug|x86.Build.0 = Debug|Win32
+		{2E28620B-6C6D-4798-A2E4-707B954CF210}.Release|x64.ActiveCfg = Release|x64
+		{2E28620B-6C6D-4798-A2E4-707B954CF210}.Release|x64.Build.0 = Release|x64
+		{2E28620B-6C6D-4798-A2E4-707B954CF210}.Release|x86.ActiveCfg = Release|Win32
+		{2E28620B-6C6D-4798-A2E4-707B954CF210}.Release|x86.Build.0 = Release|Win32
+		{7DCFE063-AB94-4A3C-85B3-344596D78621}.Debug|x64.ActiveCfg = Debug|x64
+		{7DCFE063-AB94-4A3C-85B3-344596D78621}.Debug|x64.Build.0 = Debug|x64
+		{7DCFE063-AB94-4A3C-85B3-344596D78621}.Debug|x86.ActiveCfg = Debug|Win32
+		{7DCFE063-AB94-4A3C-85B3-344596D78621}.Debug|x86.Build.0 = Debug|Win32
+		{7DCFE063-AB94-4A3C-85B3-344596D78621}.Release|x64.ActiveCfg = Release|x64
+		{7DCFE063-AB94-4A3C-85B3-344596D78621}.Release|x64.Build.0 = Release|x64
+		{7DCFE063-AB94-4A3C-85B3-344596D78621}.Release|x86.ActiveCfg = Release|Win32
+		{7DCFE063-AB94-4A3C-85B3-344596D78621}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

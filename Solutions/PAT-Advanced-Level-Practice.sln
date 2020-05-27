@@ -267,6 +267,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1104 Sum of Number Segments
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1105 Spiral Matrix", "1105 Spiral Matrix\1105 Spiral Matrix.vcxproj", "{7DCFE063-AB94-4A3C-85B3-344596D78621}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1106 Lowest Price in Supply Chain", "1106 Lowest Price in Supply Chain\1106 Lowest Price in Supply Chain.vcxproj", "{67FC9185-385D-412E-A8FE-5EE1E39ABCC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -1331,6 +1333,14 @@ Global
 		{7DCFE063-AB94-4A3C-85B3-344596D78621}.Release|x64.Build.0 = Release|x64
 		{7DCFE063-AB94-4A3C-85B3-344596D78621}.Release|x86.ActiveCfg = Release|Win32
 		{7DCFE063-AB94-4A3C-85B3-344596D78621}.Release|x86.Build.0 = Release|Win32
+		{67FC9185-385D-412E-A8FE-5EE1E39ABCC2}.Debug|x64.ActiveCfg = Debug|x64
+		{67FC9185-385D-412E-A8FE-5EE1E39ABCC2}.Debug|x64.Build.0 = Debug|x64
+		{67FC9185-385D-412E-A8FE-5EE1E39ABCC2}.Debug|x86.ActiveCfg = Debug|Win32
+		{67FC9185-385D-412E-A8FE-5EE1E39ABCC2}.Debug|x86.Build.0 = Debug|Win32
+		{67FC9185-385D-412E-A8FE-5EE1E39ABCC2}.Release|x64.ActiveCfg = Release|x64
+		{67FC9185-385D-412E-A8FE-5EE1E39ABCC2}.Release|x64.Build.0 = Release|x64
+		{67FC9185-385D-412E-A8FE-5EE1E39ABCC2}.Release|x86.ActiveCfg = Release|Win32
+		{67FC9185-385D-412E-A8FE-5EE1E39ABCC2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

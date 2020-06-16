@@ -23,6 +23,12 @@
 
 **另有提取出的 C++ 源代码在另一分支 [Source Code ](https://github.com/bipy/PAT-Advanced-Level-Practice/tree/source)**
 
-参加了 2019.9.8 的 PAT 考试，详情见我的Blog： [一次”不太顺利”的 PAT 考试经历](https://blog.zhengrh.com/post/pat-20190908/)
+ 
 
-关于 [1104 Sum of Number Segments](https://pintia.cn/problem-sets/994805342720868352/problems/994805363914686464) 的讨论：[由一道 OJ 引发的关于 double 类型的一些思考](https://blog.zhengrh.com/post/about-double/)
+# Specialties
+
+- [1104 Sum of Number Segments](https://pintia.cn/problem-sets/994805342720868352/problems/994805363914686464) 相关讨论：[由一道 OJ 引发的关于 double 类型的一些思考](https://blog.zhengrh.com/post/about-double/)
+
+    **2020.6.15 - PAT 官方已参考上文修改了 1104 的相关数据**
+
+- 考试经验贴：[一次”不太顺利”的 PAT 考试经历](https://blog.zhengrh.com/post/pat-20190908/)

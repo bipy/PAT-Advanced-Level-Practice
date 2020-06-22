@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<string>
 using namespace std;
@@ -48,7 +48,7 @@ int main() {
 	if (ans.empty()) {
 		ans.append(num[0] + " ");
 	}
-	ans.erase(ans.end() - 1);//´Ë´¦ÓÃans.end()Ò²¿ÉÒÔÔÚVSÉÏÔËĞĞ£¬µ«ÊÇÔÚG++ÔËĞĞ³ö´í
+	ans.erase(ans.end() - 1);//æ­¤å¤„ç”¨ans.end()ä¹Ÿå¯ä»¥åœ¨VSä¸Šè¿è¡Œï¼Œä½†æ˜¯åœ¨G++è¿è¡Œå‡ºé”™
 	cout << ans;
 	return 0;
 }

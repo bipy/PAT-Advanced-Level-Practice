@@ -1,10 +1,10 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 #include<algorithm>
 #include<vector>
 #include<unordered_map>
 using namespace std;
-//Ò»¿ªÊ¼dateÊ¹ÓÃÁËintĞÍ£¬Ã»¿¼ÂÇµ½00ÄêÕâÖÖÇé¿ö£¬µ¼ÖÂ´ğ°¸´íÎó
+//ä¸€å¼€å§‹dateä½¿ç”¨äº†intå‹ï¼Œæ²¡è€ƒè™‘åˆ°00å¹´è¿™ç§æƒ…å†µï¼Œå¯¼è‡´ç­”æ¡ˆé”™è¯¯
 struct node {
 	string id,date;
 	int score, site;

@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<deque>
 using namespace std;
@@ -6,17 +6,17 @@ struct node {
 	int x, y, z, index;
 };
 int M, N, L, T;
-//ÈýÎ¬Êý×é
+//ä¸‰ç»´æ•°ç»„
 vector<vector<vector<int> > > brain;
 vector<bool> visited;
-//ÏßÐÔ×ªÈýÎ¬
+//çº¿æ€§è½¬ä¸‰ç»´
 node getLoction(int index) {
 	int z = index / (M * N);
 	int y = index % (M * N) / N;
 	int x = index % N;
 	return node{ x,y,z,index };
 }
-//Ò»²½BFS
+//ä¸€æ­¥BFS
 void travel(node next, deque<node>& q) {
 	if (next.x < 0 || next.y < 0 || next.z < 0 || next.x >= N || next.y >= M || next.z >= L) {
 		return;

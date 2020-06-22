@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #define maxK 1001
 using namespace std;
 int main() {
@@ -23,14 +23,14 @@ int main() {
 		}
 		else {
 			int min = i - 1;
-			for (int k = i - N * M; k < i; k++) {	//ÕÒµ½×îÔç×ßµÄÈË£¬È·¶¨ËùÔÚ¶Ó
+			for (int k = i - N * M; k < i; k++) {	//æ‰¾åˆ°æœ€æ—©èµ°çš„äººï¼Œç¡®å®šæ‰€åœ¨é˜Ÿ
 				if (gone[k] == 0 && wait[k] < wait[min]) {
 					min = k;
 				}
 			}
 			line[i] = line[min];
 			gone[min] = 1;
-			for (int j = i - 1; j > 0; j--) {	//ÕÒµ½ËùÔÚ¶ÓµÄ×îÍí×ßµÄÈË
+			for (int j = i - 1; j > 0; j--) {	//æ‰¾åˆ°æ‰€åœ¨é˜Ÿçš„æœ€æ™šèµ°çš„äºº
 				if (line[j] == line[i]) {
 					wait[i] = wait[j] + ptime[i];
 					break;

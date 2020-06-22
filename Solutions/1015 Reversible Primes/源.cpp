@@ -1,10 +1,10 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<cmath>
 #include<algorithm>
 #include<string>
 using namespace std;
 bool isPrime(int n) {
-	if (n <= 1) {	//Ã»ÓÐ´Ë´¦¹ý²»ÁËµÚÈý¸ö²âÊÔµã
+	if (n <= 1) {	//æ²¡æœ‰æ­¤å¤„è¿‡ä¸äº†ç¬¬ä¸‰ä¸ªæµ‹è¯•ç‚¹
 		return false;
 	}
 	for (int i = sqrt(n); i > 1; i--) {

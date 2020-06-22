@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<algorithm>
 using namespace std;
@@ -6,7 +6,7 @@ struct node {
 	long int num, den;
 };
 vector<node> v;
-//×îĞ¡¹«±¶Êı = Á½ÊıÖ®»ı / ×î´ó¹«ÒòÊı
+//æœ€å°å…¬å€æ•° = ä¸¤æ•°ä¹‹ç§¯ / æœ€å¤§å…¬å› æ•°
 long int gcd(long int a, long int b) {
 	return b ? gcd(b, a % b) : a;
 }

@@ -1,17 +1,17 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 #include<vector>
 using namespace std;
-//·ÖÊı
+//åˆ†æ•°
 struct frac {
 	long long integer = 0, n = 0, d = 1;
 	bool neg = false;
 };
-//Çó×î´ó¹«ÒòÊı
+//æ±‚æœ€å¤§å…¬å› æ•°
 long long gcd(long long a, long long b) {
 	return b ? gcd(b, a % b) : a;
 }
-//È¡¾ø¶ÔÖµ£¬¼ÇÂ¼ÊÇ·ñÎª¸ºÊı
+//å–ç»å¯¹å€¼ï¼Œè®°å½•æ˜¯å¦ä¸ºè´Ÿæ•°
 void posify(frac& x) {
 	bool neg = false;
 	if (x.integer < 0) {
@@ -24,27 +24,27 @@ void posify(frac& x) {
 	}
 	x.neg = neg;
 }
-//×ª»¯Îª¸ºÊı
+//è½¬åŒ–ä¸ºè´Ÿæ•°
 void negify(frac& x) {
 	if (x.neg) {
 		x.integer = -x.integer;
 		x.n = -x.n;
 	}
 }
-//»¯¼ò·ÖÊ½
+//åŒ–ç®€åˆ†å¼
 void minify(frac& x) {
 	long long m = gcd(x.d, x.n);
 	x.n /= m;
 	x.d /= m;
 }
-//Í¨·Ö
+//é€šåˆ†
 void common(frac& a, frac& b) {
 	long long m = a.d * b.d / gcd(a.d, b.d);
 	a.n = a.n * (m / a.d);
 	b.n = b.n * (m / b.d);
 	a.d = b.d = m;
 }
-//¸ñÊ½»¯
+//æ ¼å¼åŒ–
 string format(frac x) {
 	string rt;
 	x.integer = x.n / x.d;
@@ -70,7 +70,7 @@ string format(frac x) {
 	}
 	return rt;
 }
-//¼Ó
+//åŠ 
 string add(frac a, frac b) {
 	frac ans;
 	common(a, b);
@@ -81,12 +81,12 @@ string add(frac a, frac b) {
 	posify(ans);
 	return format(ans);
 }
-//¼õ
+//å‡
 string sub(frac a, frac b) {
 	b.neg = !b.neg;
 	return add(a, b);
 }
-//³Ë
+//ä¹˜
 string mul(frac a, frac b) {
 	negify(a);
 	negify(b);
@@ -96,7 +96,7 @@ string mul(frac a, frac b) {
 	posify(ans);
 	return format(ans);
 }
-//³ı
+//é™¤
 string div(frac a, frac b) {
 	if (b.n == 0) {
 		return "Inf";
@@ -106,7 +106,7 @@ string div(frac a, frac b) {
 	b.d = temp;
 	return mul(a, b);
 }
-//¶ÁÈ¡Êı¾İ³õÊ¼»¯
+//è¯»å–æ•°æ®åˆå§‹åŒ–
 void init(frac& x) {
 	string s;
 	cin >> s;

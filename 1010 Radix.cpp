@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 #include<cmath>
 #include<algorithm>
@@ -20,7 +20,7 @@ int main() {
 		dec[tag] += getInteger(n[tag][length - 1 - i]) * pow(radix, i);
 	}
 	length = n[3 - tag].length();
-	long long low = getInteger(*max_element(n[3 - tag].begin(), n[3 - tag].end())) + 1;	//´Ë´¦±ØÐë+1
+	long long low = getInteger(*max_element(n[3 - tag].begin(), n[3 - tag].end())) + 1;	//æ­¤å¤„å¿…é¡»+1
 	long long high = max(low, dec[tag]);
 	long long ans;
 	int flag = 0;

@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<unordered_map>
 using namespace std;
 struct node {
@@ -20,7 +20,7 @@ int main() {
 	}
 	for (int i = s2; i != -1; i = m[i].next) {
 		if (m[i].visited == true) {
-			printf("%05d", i);	//×¢ÒâÊä³ö¸ñÊ½
+			printf("%05d", i);	//æ³¨æ„è¾“å‡ºæ ¼å¼
 			return 0;
 		}
 	}

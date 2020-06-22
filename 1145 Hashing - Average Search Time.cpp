@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<cmath>
 using namespace std;
@@ -43,7 +43,7 @@ bool insert(int x) {
 }
 int search(int x) {
 	int pos = Hash(x), count = 0;
-	for (int i = 0; i <= tablesize; i++) {	//¸öÈËÈÏÎªiÃ»±ØÒªÈ¡µ½tablesize£¬µ«ÄÇÑùÎÞ·¨AC
+	for (int i = 0; i <= tablesize; i++) {	//ä¸ªäººè®¤ä¸ºiæ²¡å¿…è¦å–åˆ°tablesizeï¼Œä½†é‚£æ ·æ— æ³•AC
 		count++;
 		int p = pos + i * i;
 		while (p >= tablesize) {

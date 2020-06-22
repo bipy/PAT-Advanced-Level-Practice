@@ -1,44 +1,44 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<unordered_map>
 #include<string>
 #include<algorithm>
 #include<vector>
 #include<deque>
-//³öÈë³¡
+//å‡ºå…¥åœº
 #define IN true
 #define OUT false
 using namespace std;
-//Ò»Ìõ¼ÇÂ¼
+//ä¸€æ¡è®°å½•
 struct record {
 	string id;
 	int second;
 	bool io;
 };
-//Ò»Á¾³µ
+//ä¸€è¾†è½¦
 struct car {
 	string id;
-	//ÕâÁ¾³µµÄÍ£³µÊ±¼ä×ÜºÍ
+	//è¿™è¾†è½¦çš„åœè½¦æ—¶é—´æ€»å’Œ
 	int stay = 0;
-	//ÕâÁ¾³µµÄËùÓĞ½ø³ö¼ÇÂ¼
+	//è¿™è¾†è½¦çš„æ‰€æœ‰è¿›å‡ºè®°å½•
 	vector<record> list;	
 };
-//ËùÓĞ¼ÇÂ¼
+//æ‰€æœ‰è®°å½•
 vector<record> allRecord;
-//ËùÓĞ²éÑ¯
+//æ‰€æœ‰æŸ¥è¯¢
 deque<int> checkPoint;
-//ËùÓĞÍ£³µ³¡ÄÚ³µÁ¾
+//æ‰€æœ‰åœè½¦åœºå†…è½¦è¾†
 unordered_map<string, record> park;
-//ËùÓĞ³µÁ¾
+//æ‰€æœ‰è½¦è¾†
 unordered_map<string, car> carList;
 
-//×ª»¯ÎªÃëÊı
+//è½¬åŒ–ä¸ºç§’æ•°
 int getTime(string& time) {
 	int h = stoi(time.substr(0, 2));
 	int m = stoi(time.substr(3, 2));
 	int s = stoi(time.substr(6, 2));
 	return h * 3600 + m * 60 + s;
 }
-//±È½ÏÆ÷
+//æ¯”è¾ƒå™¨
 bool cmp(const record& a, const record& b) {
 	return a.second < b.second;
 }
@@ -46,7 +46,7 @@ bool alphabet(const car& a, const car& b) {
 	return a.id < b.id;
 }
 int main() {
-	//¶ÁÈ¡Êı¾İ
+	//è¯»å–æ•°æ®
 	int N, K;
 	cin >> N >> K;
 	for (int i = 0; i < N; i++) {
@@ -62,13 +62,13 @@ int main() {
 		cin >> t;
 		checkPoint.push_back(getTime(t));
 	}
-	//½«ËùÓĞ¼ÇÂ¼ÒÔÊ±¼äË³ĞòÅÅĞò
+	//å°†æ‰€æœ‰è®°å½•ä»¥æ—¶é—´é¡ºåºæ’åº
 	sort(allRecord.begin(), allRecord.end(), cmp);
-	//¼ÇÂ¼Ã¿Á¾³µ¸÷×ÔµÄ½ø³ö
+	//è®°å½•æ¯è¾†è½¦å„è‡ªçš„è¿›å‡º
 	for (auto it = allRecord.begin(); it != allRecord.end(); it++) {
 		carList[it->id].list.push_back(*it);
 	}
-	//°´Ê±¼äË³Ğò´¦ÀíÊı¾İ
+	//æŒ‰æ—¶é—´é¡ºåºå¤„ç†æ•°æ®
 	for (int i = 0; i < allRecord.size(); i++) {
 		record cur = allRecord[i];
 		while (!checkPoint.empty() && cur.second > checkPoint.front()) {
@@ -76,11 +76,11 @@ int main() {
 			checkPoint.pop_front();
 		}
 		if (cur.io == IN) {
-			//¶ÔÓÚ½ø³¡³µÁ¾£¬²éÕÒÏÂÒ»Ìõ¼ÇÂ¼ÊÇ·ñÎª³ö³¡
+			//å¯¹äºè¿›åœºè½¦è¾†ï¼ŒæŸ¥æ‰¾ä¸‹ä¸€æ¡è®°å½•æ˜¯å¦ä¸ºå‡ºåœº
 			for (auto it = carList[cur.id].list.begin(); it != carList[cur.id].list.end(); it++) {
 				if (cur.second < it->second) {
 					if (it->io == OUT) {
-						//·ûºÏÌõ¼ş£¬Í£ÈëÍ£³µ³¡
+						//ç¬¦åˆæ¡ä»¶ï¼Œåœå…¥åœè½¦åœº
 						park[cur.id] = cur;
 					}
 					break;
@@ -89,22 +89,22 @@ int main() {
 
 		}
 		else if (cur.io == OUT) {
-			//¶ÔÓÚ³ö³¡³µÁ¾£¬¼ì²é³¡ÄÚÊÇ·ñÓĞ¸Ã³µ
+			//å¯¹äºå‡ºåœºè½¦è¾†ï¼Œæ£€æŸ¥åœºå†…æ˜¯å¦æœ‰è¯¥è½¦
 			if (park.count(cur.id) != 0) {
-				//¼ÆËãÍ£³µÊ±¼ä
+				//è®¡ç®—åœè½¦æ—¶é—´
 				int t = cur.second - park[cur.id].second;
 				carList[cur.id].stay += t;
-				//³ö³¡
+				//å‡ºåœº
 				park.erase(cur.id);
 			}
 		}
 	}
-	//Êä³öÊ£ÏÂµÄ¼ì²éµã
+	//è¾“å‡ºå‰©ä¸‹çš„æ£€æŸ¥ç‚¹
 	while (!checkPoint.empty()) {
 		cout << park.size() << endl;
 		checkPoint.pop_front();
 	}
-	//ÕÒÍ£³µÊ±¼ä×î³¤µÄ£¬Êä³ö
+	//æ‰¾åœè½¦æ—¶é—´æœ€é•¿çš„ï¼Œè¾“å‡º
 	int max = -1;
 	for (auto it = carList.begin(); it != carList.end(); it++) {
 		if (max < it->second.stay) {

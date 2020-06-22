@@ -5,7 +5,7 @@ struct node {
 	int index, level;
 };
 vector<vector<int> > family;
-vector<bool> visited;//·ÀÖ¹ÂÒÂ×
+vector<bool> visited;//é˜²æ­¢ä¹±ä¼¦
 vector<int> gen;
 void dfs(node cur) {
 	visited[cur.index] = true;

@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 #include<cmath>
 using namespace std;
@@ -14,7 +14,7 @@ int main() {
 		}
 	}
 	ans = first[0] + first.substr(2);
-	//Ïò×óÒÆ
+	//å‘å·¦ç§»
 	if (stoi(second) < 0) {
 		length = first.length() + abs(stoi(second));
 		while (ans.length() < length - 2) {
@@ -22,9 +22,9 @@ int main() {
 		}
 		ans = "0." + ans;
 	}
-	//ÏòÓÒÒÆ»ò²»ÒÆ
+	//å‘å³ç§»æˆ–ä¸ç§»
 	else {
-		//ÕÒµ½µÚÒ»¸ö·ÇÁãÊı×Ö
+		//æ‰¾åˆ°ç¬¬ä¸€ä¸ªéé›¶æ•°å­—
 		int eff = 0;
 		for (int i = 0; i < ans.length(); i++) {
 			if (ans[i] != '0') {
@@ -32,19 +32,19 @@ int main() {
 				break;
 			}
 		}
-		//ÒÆ¶¯ºóÓĞĞ¡ÊıµãµÄÇé¿ö
+		//ç§»åŠ¨åæœ‰å°æ•°ç‚¹çš„æƒ…å†µ
 		if (ans.length() - 1 > stoi(second)) {
-			//²åÈëĞ¡Êıµã
+			//æ’å…¥å°æ•°ç‚¹
 			ans.insert(ans.begin() + stoi(second) + 1, '.');
 			/*
-			Ñ¡ÔñĞ¡ÊıµãºÍµÚÒ»¸ö·ÇÁãÊı×ÖÖĞ¿¿Ç°µÄ£¬½ØÈ¡ºó°ë¶Î
-			´Ë´¦²åÈëĞ¡Êıµã²»»á¶ÔeffµÄÎ»ÖÃÔì³ÉÓ°Ïì£¬ÒòÎªÁ½¸öÌõ¼ş»¥³â£º
-			1.Ğ¡ÊıµãÔÚÇ°-->¶ÔeffÔì³ÉÓ°Ïì-->Ñ¡ÔñĞ¡Êıµã
-			2.Ğ¡ÊıµãÔÚºó-->¶ÔeffÎŞÓ°Ïì-->Ñ¡Ôñeff
+			é€‰æ‹©å°æ•°ç‚¹å’Œç¬¬ä¸€ä¸ªéé›¶æ•°å­—ä¸­é å‰çš„ï¼Œæˆªå–ååŠæ®µ
+			æ­¤å¤„æ’å…¥å°æ•°ç‚¹ä¸ä¼šå¯¹effçš„ä½ç½®é€ æˆå½±å“ï¼Œå› ä¸ºä¸¤ä¸ªæ¡ä»¶äº’æ–¥ï¼š
+			1.å°æ•°ç‚¹åœ¨å‰-->å¯¹effé€ æˆå½±å“-->é€‰æ‹©å°æ•°ç‚¹
+			2.å°æ•°ç‚¹åœ¨å-->å¯¹effæ— å½±å“-->é€‰æ‹©eff
 			*/
 			ans = ans.substr(eff < stoi(second) + 1 ? eff : stoi(second));
 		}
-		//ÒÆ¶¯ºóÎŞĞ¡ÊıµãµÄÇé¿ö
+		//ç§»åŠ¨åæ— å°æ•°ç‚¹çš„æƒ…å†µ
 		else {
 			length = stoi(second) + 1;
 			ans = ans.substr(eff);

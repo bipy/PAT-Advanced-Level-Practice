@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<string>
 using namespace std;
@@ -20,7 +20,7 @@ int main() {
 	for (int i = 0; i < 2 * n; i++) {
 		string s;
 		//getline(cin, s);
-		//´Ë´¦Ê¹ÓÃgetlineÐèÒª×¢ÒâPushµÄÊý×Ö´óÓÚ10µÄÎÊÌâ
+		//æ­¤å¤„ä½¿ç”¨getlineéœ€è¦æ³¨æ„Pushçš„æ•°å­—å¤§äºŽ10çš„é—®é¢˜
 		cin >> s;
 		if (s == "Pop") {
 			in.push_back(stack.back());

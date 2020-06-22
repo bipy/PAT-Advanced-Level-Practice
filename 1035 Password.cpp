@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<unordered_map>
 using namespace std;
@@ -26,7 +26,7 @@ int main() {
 			ans.push_back(temp);
 		}
 	}
-	if (ans.size() == 0) {	//¿¨ÔÚµ¥¸´ÊıÉÏÁË2333
+	if (ans.size() == 0) {	//å¡åœ¨å•å¤æ•°ä¸Šäº†2333
 		n == 1 ? printf("There is 1 account and no account is modified") : printf("There are %d accounts and no account is modified", n);
 	}
 	else {

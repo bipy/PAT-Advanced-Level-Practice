@@ -1,8 +1,8 @@
-#include<iostream>
+﻿#include<iostream>
 #include<string>
 #include<vector>
 using namespace std;
-//���ַ����ж���Ԫ��С�ڸ�����x
+//二分法求有多少元素小于给定的x
 long long find(long long left, long long right, long long x, vector<long long>& v) {
 	long long mid = left;
 	while (left <= right) {
@@ -14,8 +14,8 @@ long long find(long long left, long long right, long long x, vector<long long>& 
 			left = mid + 1;
 		}
 	}
-	//���ַ���õĽⲻȷ���Ƿ���ڻ�С��
-	//�����һ����������Ϊv[mid]!=x�����Լ�1���Ա�֤���ؽϴ��ֵ
+	//二分法求得的解不确定是否大于或小于
+	//因此做一步修正，因为v[mid]!=x，所以加1可以保证返回较大的值
 	if (v[mid] < x) {
 		mid++;
 	}

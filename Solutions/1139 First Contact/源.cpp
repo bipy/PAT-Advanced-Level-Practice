@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<unordered_map>
 #include<algorithm>
@@ -26,11 +26,11 @@ int main() {
 		string s1, s2;
 		cin >> s1 >> s2;
 		int p1 = stoi(s1), p2 = stoi(s2);
-		gender[p1] = s1.length() == 4;//¿Ó£º²âÊÔµã2£º"-0000" ÎÞ·¨ÅÐ¶ÏÕý¸º£¬ËùÒÔÓÃstring
+		gender[p1] = s1.length() == 4;//å‘ï¼šæµ‹è¯•ç‚¹2ï¼š"-0000" æ— æ³•åˆ¤æ–­æ­£è´Ÿï¼Œæ‰€ä»¥ç”¨string
 		gender[p2] = s2.length() == 4;
 		g[p1][p2] = g[p2][p1] = true;
 		if (gender[p1] == gender[p2]) {
-			samesex[p1][p2] = samesex[p2][p1] = true;//²»ÏÈ°ÑÍ¬ÐÔÕÒ³öÀ´»á³¬Ê±
+			samesex[p1][p2] = samesex[p2][p1] = true;//ä¸å…ˆæŠŠåŒæ€§æ‰¾å‡ºæ¥ä¼šè¶…æ—¶
 		}
 	}
 	cin >> k;

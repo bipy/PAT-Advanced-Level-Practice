@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<unordered_map>
 #include<string>
@@ -27,7 +27,7 @@ int main() {
 		string id, sname;
 		double score;
 		cin >> id >> score >> sname;
-		//tolowerÇ°²»¼Ó::±¨´í£¬È«¾Ö×÷ÓÃÓò
+		//tolowerå‰ä¸åŠ ::æŠ¥é”™ï¼Œå…¨å±€ä½œç”¨åŸŸ
 		transform(sname.begin(), sname.end(), sname.begin(), ::tolower);
 		school[sname].name = sname;
 		school[sname].num++;

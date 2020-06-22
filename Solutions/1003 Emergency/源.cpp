@@ -1,13 +1,13 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<algorithm>
 #define maxNum 510
 #define INF 999999
 using namespace std;
 int N, M, C1, C2;
 int edge[maxNum][maxNum], num[maxNum], man[maxNum], dis[maxNum], gather[maxNum];
-//num µ½iµã×î¶ÌÂ·¾¶ÌõÊı
-//man ³ÇÊĞÀïÈËÊı
-//gather µ½µÚiµãÒÑ¼¯½áÈËÊıÖ®ºÍ
+//num åˆ°iç‚¹æœ€çŸ­è·¯å¾„æ¡æ•°
+//man åŸå¸‚é‡Œäººæ•°
+//gather åˆ°ç¬¬iç‚¹å·²é›†ç»“äººæ•°ä¹‹å’Œ
 bool visited[maxNum];
 int main() {
 	freopen("Text.txt", "r", stdin);

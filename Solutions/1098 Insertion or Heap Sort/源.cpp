@@ -34,7 +34,7 @@ void insertion() {
 }
 
 void heap() {
-	// ËäÈ»ÖªµÀ´ËÌâ¿¼²éHeap SortµÄĞ´·¨£¬µ«ÍµÀÁÓÃSTLÁË
+	// è™½ç„¶çŸ¥é“æ­¤é¢˜è€ƒæŸ¥Heap Sortçš„å†™æ³•ï¼Œä½†å·æ‡’ç”¨STLäº†
 	bool flag = false;
 	make_heap(H.begin(), H.end());
 	for (int rear = H.size() - 1; rear >= 0; rear--) {

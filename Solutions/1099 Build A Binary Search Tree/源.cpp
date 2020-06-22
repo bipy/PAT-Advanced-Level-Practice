@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<algorithm>
 using namespace std;
@@ -8,7 +8,7 @@ struct node {
 };
 vector<node> tree;
 vector<int> seq, ans;
-// ±éÀú¸³Öµ
+// éå†èµ‹å€¼
 void travel(int cur) {
 	if (tree[cur].right != -1) {
 		travel(tree[cur].right);
@@ -33,7 +33,7 @@ int main() {
 	}
 	sort(seq.begin(), seq.end());
 	travel(0);
-	// ²ãĞò±éÀú
+	// å±‚åºéå†
 	ans.push_back(0);
 	int p = 0;
 	while (ans.size() < n) {

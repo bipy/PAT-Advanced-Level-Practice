@@ -1,15 +1,15 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<algorithm>
 using namespace std;
-struct node {	//¹Ë¿Í
+struct node {	//é¡¾å®¢
 	int arr;
 	int cost;
 	int wait;
 	int vip;
 	bool skip = false;
 };
-struct table {	//×À×Ó
+struct table {	//æ¡Œå­
 	int curtime = 8 * 3600;
 	int id;
 	int vip = 0;
@@ -17,22 +17,22 @@ struct table {	//×À×Ó
 };
 vector<node> users;
 vector<table> tables;
-bool cmp(node a, node b) {	//¹Ë¿Í°´ÕÕÏÈÀ´ºóµ½ÅÅĞò
+bool cmp(node a, node b) {	//é¡¾å®¢æŒ‰ç…§å…ˆæ¥ååˆ°æ’åº
 	return a.arr < b.arr;
 }
-bool tablecmp(table a, table b) {	//×À×Ó°´ÕÕ×îÏÈ¿ÕÏĞÅÅĞò
+bool tablecmp(table a, table b) {	//æ¡Œå­æŒ‰ç…§æœ€å…ˆç©ºé—²æ’åº
 	return a.curtime < b.curtime;
 }
-bool tableorder(table a, table b) {		//Êä³öÒªÇóµÄË³Ğò£¬°´id´óĞ¡
+bool tableorder(table a, table b) {		//è¾“å‡ºè¦æ±‚çš„é¡ºåºï¼ŒæŒ‰idå¤§å°
 	return a.id < b.id;
 }
-bool userorder(node a, node b) {	//Êä³öÒªÇóµÄË³Ğò£¬°´¿ªÊ¼Ê±¼ä
+bool userorder(node a, node b) {	//è¾“å‡ºè¦æ±‚çš„é¡ºåºï¼ŒæŒ‰å¼€å§‹æ—¶é—´
 	return a.arr + a.wait < b.arr + b.wait;
 }
 void todate(int t) {
 	printf("%02d:%02d:%02d ", t / 3600, t % 3600 / 60, t % 60);
 }
-void serve(int index, int arr, int cost) {	//·şÎñ
+void serve(int index, int arr, int cost) {	//æœåŠ¡
 	if (tables[index].curtime < arr) {
 		tables[index].curtime = arr;
 	}
@@ -41,7 +41,7 @@ void serve(int index, int arr, int cost) {	//·şÎñ
 	}
 	tables[index].curtime += cost;
 }
-int findtable(node* usr) {	//ÕÒµ½¿ÉÓÃ×À×ÓÖĞ±àºÅ×îĞ¡µÄ£¬Èç¹ûÃ»ÓĞvip×À£¬vipÍæ×îĞ¡ºÅµÄÆÕÍ¨×À
+int findtable(node* usr) {	//æ‰¾åˆ°å¯ç”¨æ¡Œå­ä¸­ç¼–å·æœ€å°çš„ï¼Œå¦‚æœæ²¡æœ‰vipæ¡Œï¼Œvipç©æœ€å°å·çš„æ™®é€šæ¡Œ
 	int min = 0;
 	for (int i = 0; i < tables.size(); i++) {
 		if (usr->vip == 1 && tables[i].curtime <= usr->arr && tables[i].vip == 1) {
@@ -58,14 +58,14 @@ int findtable(node* usr) {	//ÕÒµ½¿ÉÓÃ×À×ÓÖĞ±àºÅ×îĞ¡µÄ£¬Èç¹ûÃ»ÓĞvip×À£¬vipÍæ×îĞ¡º
 			break;
 		}
 	}
-	if (usr->vip == 1 && min == 0 && tables[0].vip == 0) {	// Ã»ÓĞvip×À£¬½«vipÊÓÎªÆÕÍ¨ÓÃ»§ÔÙÕÒÒ»±é
+	if (usr->vip == 1 && min == 0 && tables[0].vip == 0) {	// æ²¡æœ‰vipæ¡Œï¼Œå°†vipè§†ä¸ºæ™®é€šç”¨æˆ·å†æ‰¾ä¸€é
 		usr->vip = 0;
 		min = findtable(usr);
 	}
 	return min;
 }
 int main() {
-	//×¼±¸½×¶Î£¬¶ÁÈëÊı¾İ
+	//å‡†å¤‡é˜¶æ®µï¼Œè¯»å…¥æ•°æ®
 	freopen("Text.txt", "r", stdin);
 	int n, k, m;
 	cin >> n;
@@ -87,43 +87,43 @@ int main() {
 	for (int i = 0; i < k; i++) {
 		tables[i].id = i;
 	}
-	//×¼±¸½×¶Î½áÊø
+	//å‡†å¤‡é˜¶æ®µç»“æŸ
 	sort(users.begin(), users.end(), cmp);
-	for (auto it = users.begin(); it != users.end(); it++) {	//¶ÔÃ¿Ò»¸ö¹Ë¿Í
-		if (it->vip == 1 && !it->skip) {	//Èç¹ûËûÊÇvipÇÒÃ»±»·şÎñ¹ı
+	for (auto it = users.begin(); it != users.end(); it++) {	//å¯¹æ¯ä¸€ä¸ªé¡¾å®¢
+		if (it->vip == 1 && !it->skip) {	//å¦‚æœä»–æ˜¯vipä¸”æ²¡è¢«æœåŠ¡è¿‡
 			sort(tables.begin(), tables.end(), tablecmp);
 			int min = findtable(&*it);
 			serve(min, it->arr, it->cost);
 			it->wait = tables[min].curtime - it->cost - it->arr;
 		}
-		else if (!it->skip) {	//Èç¹ûËûÃ»±»·şÎñ¹ı
+		else if (!it->skip) {	//å¦‚æœä»–æ²¡è¢«æœåŠ¡è¿‡
 			bool flag = false;
 			while (true) {
 				sort(tables.begin(), tables.end(), tablecmp);
 				int min = findtable(&*it);
-				if (tables[min].vip == 1) {	//Èç¹ûÆÕÍ¨ÈËÏë×øvip×À
-					for (auto ir = it; ir != users.end(); ir++) {	//ÕÒµ½ÏÂÒ»¸öÄÜµ½µÄvip£¬×ø±àºÅ×îĞ¡µÄvip×À
+				if (tables[min].vip == 1) {	//å¦‚æœæ™®é€šäººæƒ³åvipæ¡Œ
+					for (auto ir = it; ir != users.end(); ir++) {	//æ‰¾åˆ°ä¸‹ä¸€ä¸ªèƒ½åˆ°çš„vipï¼Œåç¼–å·æœ€å°çš„vipæ¡Œ
 						if (ir->vip == 1 && !ir->skip) {
 							if (ir->arr <= tables[min].curtime) {
 								serve(min, ir->arr, ir->cost);
 								ir->wait = tables[min].curtime - ir->cost - ir->arr;
 								ir->skip = true;
-								flag = true;	//³É¹¦ÕÒµ½²å¶ÓµÄvip£¬ÉèÖÃflag
+								flag = true;	//æˆåŠŸæ‰¾åˆ°æ’é˜Ÿçš„vipï¼Œè®¾ç½®flag
 								break;
 							}
 						}
 					}
-					if (flag) {	//ÓÉflag£¬ÔÙ´ÎÎª¸ÃÆÕÍ¨ÈËÕÒ×À×Ó
+					if (flag) {	//ç”±flagï¼Œå†æ¬¡ä¸ºè¯¥æ™®é€šäººæ‰¾æ¡Œå­
 						continue;
 					}
-				}	//ÆÕÍ¨ÈË + ÆÕÍ¨×À = Ö±½Ó×ø
+				}	//æ™®é€šäºº + æ™®é€šæ¡Œ = ç›´æ¥å
 				serve(min, it->arr, it->cost);
 				it->wait = tables[min].curtime - it->cost - it->arr;
 				break;
 			}
 		}
 	}
-	//Êä³ö
+	//è¾“å‡º
 	sort(users.begin(), users.end(), userorder);
 	for (auto it = users.begin(); it != users.end(); it++) {
 		if (it->arr + it->wait < 21 * 3600) {

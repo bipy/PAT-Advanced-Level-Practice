@@ -2,7 +2,7 @@
 #include<string>
 #define maxN 10
 using namespace std;
-//long longĞÍ²»ÄÜÖ§³Öµ½21Î»
+//long longå‹ä¸èƒ½æ”¯æŒåˆ°21ä½
 int main() {
 	int count[maxN], ans = 1, w = 0;
 	fill(count, count + maxN, 0);

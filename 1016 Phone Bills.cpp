@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 #include<map>
 #include<vector>
@@ -57,7 +57,7 @@ int main() {
 	}
 	for (auto it = bill.begin(); it != bill.end(); it++) {
 		sort(it->second.record.begin(), it->second.record.end(), cmp);
-		int flag = 0;	//ÅĞ¶Ï´ËÈËÊÇ·ñÏû·Ñ¹ı£¬²»Ïû·ÑµÄ²»Êä³ö
+		int flag = 0;	//åˆ¤æ–­æ­¤äººæ˜¯å¦æ¶ˆè´¹è¿‡ï¼Œä¸æ¶ˆè´¹çš„ä¸è¾“å‡º
 		for (int i = 1; i < it->second.record.size(); i++) {
 			string formed;
 			if (it->second.record[i].substr(12) == "off-line" && it->second.record[i - 1].substr(12) == "on-line") {

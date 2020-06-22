@@ -1,8 +1,8 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #define maxN 1001
 /*
-	ÓĞÒ»¶¨¸ÅÂÊ³¬Ê±£¬°Ñcin»»³Éscanfºó¿É½ÚÊ¡4ms
+	æœ‰ä¸€å®šæ¦‚ç‡è¶…æ—¶ï¼ŒæŠŠcinæ¢æˆscanfåå¯èŠ‚çœ4ms
 */
 using namespace std;
 int N, K, M, concern;

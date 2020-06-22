@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<unordered_map>
 #include<algorithm>
@@ -25,7 +25,7 @@ int main() {
 		dp[i] = 1;
 		for (int j = 0; j < i; j++) {
 			if (seq[i] >= seq[j]) {
-				dp[i] = max(dp[i], dp[j] + 1);	//µÈÓÚiÇ°ÃæµÄ×î³¤µÄĞòÁĞ+1
+				dp[i] = max(dp[i], dp[j] + 1);	//ç­‰äºiå‰é¢çš„æœ€é•¿çš„åºåˆ—+1
 			}
 		}
 		ans = max(dp[i], ans);

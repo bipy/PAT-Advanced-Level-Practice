@@ -1,30 +1,30 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<unordered_map>
 #include<vector>
 #include<algorithm>
 #include<string>
 using namespace std;
 
-//³ÇÊĞ
+//åŸå¸‚
 struct city {
 	string name;
 	int happiness;
 };
 
-//Â·¾¶
+//è·¯å¾„
 struct route {
 	vector<int> path;
 	int hSum, hAvg;
 };
 
-unordered_map<string, int> m;	//½« string ×ª»¯Îª int
-vector<route> ans;	//´æ·ÅËùÓĞ×î¶ÌÂ·¾¶µÄÈİÆ÷
-vector<vector<int> > cost;	//ÁÚ½Ó¾ØÕó
-vector<city> cityList;	//½« int ×ª»¯Îª string
-vector<bool> visited;	//²éÖØ¼¯ºÏ
-vector<int> dis;		//¸÷µãÓëÆğµãµÄ¾àÀë
+unordered_map<string, int> m;	//å°† string è½¬åŒ–ä¸º int
+vector<route> ans;	//å­˜æ”¾æ‰€æœ‰æœ€çŸ­è·¯å¾„çš„å®¹å™¨
+vector<vector<int> > cost;	//é‚»æ¥çŸ©é˜µ
+vector<city> cityList;	//å°† int è½¬åŒ–ä¸º string
+vector<bool> visited;	//æŸ¥é‡é›†åˆ
+vector<int> dis;		//å„ç‚¹ä¸èµ·ç‚¹çš„è·ç¦»
 
-string start, destination = "ROM";	//Æğµã£¬ÖÕµã
+string start, destination = "ROM";	//èµ·ç‚¹ï¼Œç»ˆç‚¹
 int N, K, costSum;
 
 void dfs(route r, vector<bool> visited) {
@@ -51,7 +51,7 @@ bool cmp(const route& a, const route& b) {
 }
 
 int main() {
-	//¶ÁÈ¡Êı¾İ
+	//è¯»å–æ•°æ®
 	//freopen("Text.txt", "r", stdin);
 	cin >> N >> K >> start;
 	cost.resize(N, vector<int>(N, -1));
@@ -107,7 +107,7 @@ int main() {
 	r.path.push_back(m[destination]);
 	dfs(r, visited);
 
-	//Êı¾İÕûÀí
+	//æ•°æ®æ•´ç†
 	for (auto it = ans.begin(); it != ans.end(); it++) {
 		it->hSum = 0;
 		for (auto i = it->path.begin(); i != it->path.end(); i++) {
@@ -118,7 +118,7 @@ int main() {
 	sort(ans.begin(), ans.end(), cmp);
 	route selected = ans.front();
 
-	//Êä³ö
+	//è¾“å‡º
 	printf("%d %d %d %d\n", ans.size(), costSum, selected.hSum, selected.hAvg);
 	cout << start;
 	for (auto it = selected.path.rbegin() + 1; it != selected.path.rend(); it++) {

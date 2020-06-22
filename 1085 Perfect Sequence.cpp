@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<algorithm>
 #include<deque>
@@ -22,7 +22,7 @@ int main() {
 	for (int i = 0; i < v.size(); i++) {
 		int left = i, right = N - 1, mid = i;
 		long long cross = (long long)p * v[i];
-		//¶þ·Ö·¨£¬·µ»ØÑ¡¶¨midµÄºóÒ»Î»£¬Èç¹ûmidÊÇ×îºóÔòÊÖ¶¯+1
+		//äºŒåˆ†æ³•ï¼Œè¿”å›žé€‰å®šmidçš„åŽä¸€ä½ï¼Œå¦‚æžœmidæ˜¯æœ€åŽåˆ™æ‰‹åŠ¨+1
 		while (left <= right) {
 			mid = (left + right) / 2;
 			if (cross >= v[mid]) {
@@ -45,7 +45,7 @@ int main() {
 	}
 	cout << maxCount;
 	/*
-	BFS³¬Ê±
+	BFSè¶…æ—¶
 	*/
 	//q.push_back(seg{ 0,N - 1 });
 	//while (!q.empty()) {

@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 #define maxK 1001
 using namespace std;
 int main() {

@@ -311,6 +311,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1126 Eulerian Path", "1126 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1127 ZigZagging on a Tree", "1127 ZigZagging on a Tree\1127 ZigZagging on a Tree.vcxproj", "{5974CA0F-D458-4FC5-BAED-3A1BA4C28705}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1131 Subway Map", "1131 Subway Map\1131 Subway Map.vcxproj", "{E71B8191-90DB-4CA7-81D6-2C695EF0A38B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -1551,6 +1553,14 @@ Global
 		{5974CA0F-D458-4FC5-BAED-3A1BA4C28705}.Release|x64.Build.0 = Release|x64
 		{5974CA0F-D458-4FC5-BAED-3A1BA4C28705}.Release|x86.ActiveCfg = Release|Win32
 		{5974CA0F-D458-4FC5-BAED-3A1BA4C28705}.Release|x86.Build.0 = Release|Win32
+		{E71B8191-90DB-4CA7-81D6-2C695EF0A38B}.Debug|x64.ActiveCfg = Debug|x64
+		{E71B8191-90DB-4CA7-81D6-2C695EF0A38B}.Debug|x64.Build.0 = Debug|x64
+		{E71B8191-90DB-4CA7-81D6-2C695EF0A38B}.Debug|x86.ActiveCfg = Debug|Win32
+		{E71B8191-90DB-4CA7-81D6-2C695EF0A38B}.Debug|x86.Build.0 = Debug|Win32
+		{E71B8191-90DB-4CA7-81D6-2C695EF0A38B}.Release|x64.ActiveCfg = Release|x64
+		{E71B8191-90DB-4CA7-81D6-2C695EF0A38B}.Release|x64.Build.0 = Release|x64
+		{E71B8191-90DB-4CA7-81D6-2C695EF0A38B}.Release|x86.ActiveCfg = Release|Win32
+		{E71B8191-90DB-4CA7-81D6-2C695EF0A38B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

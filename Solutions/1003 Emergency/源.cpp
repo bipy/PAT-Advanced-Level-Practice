@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 #include<algorithm>
 #define maxNum 510
 #define INF 999999

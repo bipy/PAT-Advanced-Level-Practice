@@ -1,103 +1,47 @@
 #include<iostream>
-#include<cstdlib>
+#include<unordered_map>
+#include<vector>
+#include<algorithm>
 using namespace std;
-/*
-系数相加可能为0，此时不能输出或者计数
-输出格式为“保留1位小数”
-
-较简单的方法：
-建一个大于最大指数的数组array
-array[指数]=系数; 通用性较低
-*/
-typedef struct Lnode* List, * PtrL;
-struct Lnode {
+struct node {
+	int e;
 	double c;
-	double e;
-	List next;
 };
-List NewNode(double c, double e) {
-	List T = (List)malloc(sizeof(struct Lnode));
-	T->c = c;
-	T->e = e;
-	T->next = NULL;
-	return T;
+// map 解决数组内存浪费问题
+unordered_map<int, double> m;
+
+bool cmp(const node& a, const node& b) {
+	return a.e > b.e;
 }
-List Calc(List A, List B) {
-	List T = (List)malloc(sizeof(struct Lnode));
-	PtrL Pt = T;
-	PtrL Pa = A->next;
-	PtrL Pb = B->next;
-	int count = 0;
-	T->next = NULL;
-	while (Pa && Pb) {
-		if (Pa->e > Pb->e) {
-			Pt->next = NewNode(Pa->c, Pa->e);
-			Pa = Pa->next;
-			Pt = Pt->next;
-		}
-		else if (Pa->e < Pb->e) {
-			Pt->next = NewNode(Pb->c, Pb->e);
-			Pb = Pb->next;
-			Pt = Pt->next;
+
+void process() {
+	int K, N;
+	double a = 0;
+	cin >> K;
+	for (int i = 0; i < K; i++) {
+		scanf("%d %lf", &N, &a);
+		if (m.find(N) != m.end()) {
+			m[N] += a;
 		}
 		else {
-			Pt->next = NewNode(Pa->c + Pb->c, Pa->e);
-			Pa = Pa->next;
-			Pb = Pb->next;
-			Pt = Pt->next;
+			m[N] = a;
 		}
-		if (Pt->c != 0) {
-			count++;
-		}
-	}
-	if (Pa && !Pb) {
-		Pt->next = Pa;
-		while (Pt->next) {
-			count++;
-			Pt = Pt->next;
-		}
-	}
-	if (!Pa && Pb) {
-		Pt->next = Pb;
-		while (Pt->next) {
-			count++;
-			Pt = Pt->next;
-		}
-	}
-	cout << count;
-	return T;
-}
-void Show(List T) {
-	PtrL p = T->next;
-	while (p) {
-		if (p->c != 0) {
-			printf(" %.f %.1f", p->e, p->c);
-		}
-		p = p->next;
 	}
 }
+
 int main() {
-	freopen("Text.txt", "r", stdin);
-	List A = (List)malloc(sizeof(struct Lnode));
-	List B = (List)malloc(sizeof(struct Lnode));
-	PtrL PtrA = A;
-	PtrL PtrB = B;
-	A->next = NULL;
-	B->next = NULL;
-	int NA, NB;
-	double e, c;
-	cin >> NA;
-	for (int i = 0; i < NA; i++) {
-		cin >> e >> c;
-		PtrA->next = NewNode(c, e);
-		PtrA = PtrA->next;
+	process();
+	process();
+	vector<node> ans;
+	for (auto& it : m) {
+		if (it.second != 0) {
+			ans.push_back(node{ it.first,it.second });
+		}
 	}
-	cin >> NB;
-	for (int i = 0; i < NB; i++) {
-		cin >> e >> c;
-		PtrB->next = NewNode(c, e);
-		PtrB = PtrB->next;
+	sort(ans.begin(), ans.end(), cmp);
+	printf("%d", ans.size());
+	for (auto& it : ans) {
+		printf(" %d %.1f", it.e, it.c);
 	}
-	Show(Calc(A, B));
 	return 0;
 }
